@@ -1,0 +1,107 @@
+@import '../assets/scss/variables';
+
+.header_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - 3rem);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../assets/images/bcg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_list,
+.nav_list_user {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav_item,
+.nav_list_item {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.nav_icon {
+  margin-right: 0.5rem;
+}
+
+.nav_link {
+  font-family: $font-rubik-regular;
+  font-size: 1.8rem;
+  color: $color-white;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    color: $color-orange;
+  }
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_big {
+    font-family: $font-rubik-regular;
+    font-weight: 400;
+    font-size: 6.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    color: $color-orange;
+  }
+  &_small {
+    font-family: $font-rubik-regular;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+  }
+  &_btn {
+    padding: 1.7rem 3.1rem;
+    font-family: $font-rubik-regular;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    margin-top: 4rem;
+    color: $color-white;
+    background: $color-orange;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.8;
+    &:hover {
+      transform: translateY(-0.3rem);
+      opacity: 1;
+    }
+  }
+}
+
+.mouse_icon {
+  width: 3rem;
+}
