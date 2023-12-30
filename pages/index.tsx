@@ -1,10 +1,6 @@
 import Head from 'next/head'
-import logo from '../assets/images/logo.svg'
 import mouseIcon from '../assets/images/mouse.svg'
-import blogIcon from '../assets/images/blog.svg'
-import exempleIcon from '../assets/images/examples.svg'
-import regIcon from '../assets/images/reg.svg'
-import inputIcon from '../assets/images/input.svg'
+import logo from '../assets/images/logo.png'
 import styles from '@/styles/Home.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,66 +15,59 @@ export default function Home() {
         <section className={styles.header_section}>
           <header className={styles.header}>
             <div className={styles.log_box}>
-              <Link href="/">
-                <Image src={logo} alt="Разработка сайтов и приложений" />
+              <Link href="/" className={styles.nav_link_logo}>
+                <Image src={logo} alt="" className={styles.logo} />
+                <p className={styles.presentation_big}>Fox Developer Portal</p>
               </Link>
             </div>
             <nav className={styles.nav_box}>
               <ul className={styles.nav_list}>
                 <li className={styles.nav_item}>
-                  <Image
-                    src={blogIcon}
-                    alt="Блог"
-                    className={styles.nav_icon}
-                  />
-                  <Link href="/blog" className={styles.nav_link}>
-                    Блог
+                  <Link href="/home" className={styles.nav_link}>
+                    Главная
                   </Link>
                 </li>
                 <li className={styles.nav_item}>
-                  <Image
-                    src={exempleIcon}
-                    alt="Примеры работ"
-                    className={styles.nav_icon}
-                  />
-                  <Link href="/exemples" className={styles.nav_link}>
-                    Примеры работ
+                  <Link href="/blog" className={styles.nav_link}>
+                    Статьи
                   </Link>
                 </li>
-              </ul>
-            </nav>
-            <div className={styles.nav_user}>
-              <ul className={styles.nav_list_user}>
+                <li className={styles.nav_item}>
+                  <Link href="/exemples" className={styles.nav_link}>
+                    Разработка
+                  </Link>
+                </li>
                 <li className={styles.nav_list_item}>
-                  <Image
-                    src={regIcon}
-                    alt="Регистрация"
-                    className={styles.nav_icon}
-                  />
                   <Link href="/registration" className={styles.nav_link}>
                     Регистрация
                   </Link>
                 </li>
                 <li className={styles.nav_list_item}>
-                  <Image
-                    src={inputIcon}
-                    alt="Авторизация"
-                    className={styles.nav_icon}
-                  />
                   <Link href="/login" className={styles.nav_link}>
                     Войти
                   </Link>
                 </li>
               </ul>
-            </div>
+            </nav>
           </header>
           <div className={styles.presentation}>
-            <h1 className={styles.presentation_big}>P.J.PARTS web Desing</h1>
-            <h2 className={styles.presentation_small}>
-              разработка и сопровождение
-              <br /> современных сайтов и приложений
-            </h2>
-            <button className={styles.presentation_btn}>заказать проект</button>
+            <div className={styles.presentation_block}>
+              <p className={styles.presentation_small}>
+                <span className={styles.presentation_small_heading}>
+                  Fox Developer Portal
+                </span>
+              </p>
+              <p className={styles.presentation_small}>
+                Российский портал для разработчиков.
+              </p>
+              <p className={styles.presentation_small}>
+                Присоединяйтесь к команде авторов и пишите полезные статьи по
+                разработке.
+              </p>
+              <button className={styles.presentation_btn}>
+                Создать статью
+              </button>
+            </div>
           </div>
           <div className={styles.mouse_down}>
             <Image src={mouseIcon} alt="Вниз" className={styles.mouse_icon} />
