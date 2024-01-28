@@ -101,25 +101,6 @@
       margin-bottom: 1rem;
     }
   }
-  &_btn {
-    padding: 1.7rem 3.1rem;
-    font-family: $font-rubik-regular;
-    font-weight: 400;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    margin-top: 2.5rem;
-    color: $color-white;
-    background: $color-purple-3;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    opacity: 0.9;
-    &:hover {
-      transform: translateY(-0.3rem);
-      opacity: 1;
-    }
-  }
 }
 
 .mouse_down {
