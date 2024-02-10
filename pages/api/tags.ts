@@ -6,6 +6,6 @@ const $host = axios.create({
 })
 
 export const getTags = async (): Promise<Tag[]> => {
-  const { data } = await $host.get('/tags')
+  const { data } = await $host.get<Tag[]>('/tags')
   return data
 }
